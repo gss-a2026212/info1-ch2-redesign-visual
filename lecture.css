@@ -14,7 +14,7 @@ header {
   background-color: #1b3a4b;
   color: #ffffff;
   text-align: center;
-  padding: 30px 20px;
+  padding: 35px 20px;
 }
 header h1 {
   margin: 0 0 10px 0;
@@ -37,23 +37,32 @@ header p {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  padding: 25px;
+  padding: 30px;
   margin-bottom: 40px;
 }
 
 .section-title {
-  font-size: 18px;
+  font-size: 20px;
   color: #1b3a4b;
   border-left: 5px solid #1b3a4b;
-  padding-left: 10px;
+  padding-left: 12px;
   margin-top: 0;
   margin-bottom: 10px;
 }
 .section-desc {
-  font-size: 13px;
+  font-size: 14px;
   color: #666;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 16px;
+  color: #1b3a4b;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 8px;
+  margin-top: 35px;
+  margin-bottom: 15px;
 }
 
 /* グリッドレイアウト */
@@ -61,6 +70,7 @@ header p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
+  margin-bottom: 25px;
 }
 
 /* カードデザイン */
@@ -70,21 +80,15 @@ header p {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin-bottom: 25px;
 }
-.good-example-wide {
+.good-example {
   border: 2px solid #c8e6c9;
-  border-radius: 6px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
 }
 
 .example-header {
   padding: 10px 15px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 13px;
 }
 .header-bad {
   background-color: #ffebee;
@@ -122,19 +126,66 @@ header p {
 .explanation li {
   margin-bottom: 5px;
 }
-.explanation li:last-child {
-  margin-bottom: 0;
+
+/* --- 1-1. フォントの種類比較 --- */
+.font-comparison-grid {
+  grid-template-columns: 1fr 1fr;
+}
+.font-sample-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: #fafafa;
+}
+.font-tag {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+.font-preview {
+  font-size: 22px;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+.font-desc {
+  font-size: 12px;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
 }
 
-/* --- 原則 1：フォント指定（極端な悪い例） --- */
+.tag-gothic { background-color: #2c3e50; }
+.tag-mincho { background-color: #8e44ad; }
+.tag-round { background-color: #27ae60; }
+.tag-pop { background-color: #e67e22; }
+
+/* 各フォントファミリー適用 */
+.type-gothic .font-preview {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.type-mincho .font-preview {
+  font-family: "MS Mincho", "Hiragino Mincho ProN", serif;
+}
+.type-round .font-preview {
+  font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+}
+.type-pop .font-preview {
+  font-family: "HGP創英角ﾎﾟｯﾌﾟ体", "Comic Sans MS", fantasy;
+}
+
+/* --- 1-2. 文字の階層構造 --- */
 .font-bad-1 {
   font-family: 'Comic Sans MS', cursive, 'HGP創英角ﾎﾟｯﾌﾟ体', fantasy;
-  line-height: 0.8 !important; /* 行間崩壊 */
-  letter-spacing: -1.5px; /* 文字間ぎちぎち */
+  line-height: 0.8 !important;
+  letter-spacing: -1.5px;
 }
 .font-bad-1 h3 {
   font-size: 14px;
-  font-weight: normal;
   margin: 0 0 5px 0;
 }
 .font-bad-1 p {
@@ -143,10 +194,35 @@ header p {
 }
 
 .font-bad-2 h4, .font-bad-2 p {
-  font-size: 14px !important; /* ジャンプ率ゼロ */
-  font-weight: normal !important; /* 強弱なし */
+  font-size: 13px !important;
+  font-weight: normal !important;
   font-family: sans-serif;
   line-height: 1.4;
+  margin: 0;
+}
+
+/* 良い階層構造 */
+.font-hierarchy {
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+.font-hierarchy .hierarchy-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1b3a4b;
+  margin: 0 0 5px 0;
+  border: none;
+  padding: 0;
+}
+.font-hierarchy .hierarchy-subtitle {
+  font-size: 14px;
+  font-weight: bold;
+  color: #7f8c8d;
+  margin: 0 0 15px 0;
+}
+.font-hierarchy .hierarchy-body {
+  font-size: 13px;
+  color: #333;
   margin: 0;
 }
 
@@ -155,7 +231,7 @@ header p {
   line-height: 1.6;
 }
 .font-good h3 {
-  font-size: 18px; /* 見出しの強調 */
+  font-size: 18px;
   font-weight: bold;
   color: #1b3a4b;
   margin: 0 0 10px 0;
@@ -165,12 +241,109 @@ header p {
   font-size: 14px;
 }
 
-/* --- 原則 2：配色・コントラスト --- */
+/* --- 2-1. 三属性ビジュアル図解 --- */
+.attributes-container {
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.attr-row {
+  margin-bottom: 20px;
+}
+.attr-row:last-child {
+  margin-bottom: 0;
+}
+.attr-label {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+.color-bar {
+  height: 25px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+/* 色相グラデーション */
+.bar-hue {
+  background: linear-gradient(to right, red, #ff8000, yellow, green, cyan, blue, magenta, red);
+}
+/* 彩度グラデーション */
+.bar-saturation {
+  background: linear-gradient(to right, #9e9e9e, #007bff);
+}
+/* 明度グラデーション */
+.bar-lightness {
+  background: linear-gradient(to right, #000000, #888888, #ffffff);
+}
+
+/* --- 2-2. 補色・類似色比較 --- */
+.color-harmony-grid {
+  grid-template-columns: 1fr 1fr;
+}
+.harmony-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: #fff;
+}
+.harmony-card h4 {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  color: #1b3a4b;
+}
+.harmony-desc {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 15px 0;
+}
+.harmony-demo {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.harmony-demo > div {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* 補色デモ配色 */
+.comp-box-1 {
+  background-color: #00ff00; /* 緑 */
+  color: #ff0000; /* 赤（ハレーション） */
+}
+.comp-box-2 {
+  background-color: #0000ff; /* 青 */
+  color: #ff8000; /* オレンジ */
+}
+
+/* 類似色デモ配色 */
+.anal-box-1 {
+  background-color: #004488; /* 深い青 */
+  color: #33ccff; /* 水色 */
+}
+.anal-box-2 {
+  background-color: #ccff33; /* 黄緑 */
+  color: #006600; /* 深い緑 */
+}
+
+.harmony-effect {
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* --- 2-3. 配色デモ --- */
 .color-bad-1 {
   background-color: #fafafa;
 }
 .color-bad-1 .text-invisible {
-  color: #f1f1f1; /* 背景とほぼ同化 */
+  color: #f1f1f1;
   font-weight: bold;
   margin: 0 0 15px 0;
   font-size: 14px;
@@ -180,7 +353,6 @@ header p {
   margin: 0;
   font-size: 14px;
 }
-/* 意味のない虹色着色 */
 .color-bad-1 .c1 { color: #ff0000; }
 .color-bad-1 .c2 { color: #e65100; }
 .color-bad-1 .c3 { color: #2e7d32; }
@@ -189,15 +361,28 @@ header p {
 .color-bad-1 .c6 { color: #c2185b; }
 
 .color-bad-2 {
-  background-color: #00ff00; /* 原色の緑 */
-  color: #ff0000; /* 原色の赤（ハレーション） */
+  background-color: #00ff00;
+  color: #ff0000;
   padding: 20px;
   text-align: center;
   font-weight: bold;
 }
 .color-bad-2 p {
   margin: 0;
-  font-size: 15px;
+  font-size: 14px;
+}
+
+.color-good-contrast {
+  background-color: #1b3a4b; /* 暗い紺色 */
+  color: #ffffff; /* 白文字でくっきり */
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.color-good-contrast p {
+  margin: 0;
+  font-size: 14px;
 }
 
 .color-good {
@@ -205,7 +390,7 @@ header p {
   color: #333333;
 }
 .color-good .badge-main {
-  background-color: #1b3a4b; /* メインカラー */
+  background-color: #1b3a4b;
   color: #ffffff;
   display: inline-block;
   padding: 4px 10px;
@@ -219,17 +404,35 @@ header p {
   font-size: 14px;
 }
 .color-good .alert-text {
-  color: #e65100; /* 強調色のオレンジ */
+  color: #e65100;
   font-weight: bold;
   margin: 0;
 }
 
 /* --- 原則 3：カラーユニバーサルデザイン --- */
+.cud-info-box {
+  background-color: #e3f2fd;
+  border: 1px solid #bbdefb;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+.cud-info-box h4 {
+  margin: 0 0 8px 0;
+  color: #0d47a1;
+  font-size: 14px;
+}
+.cud-info-box p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
 .cud-bad {
   background-color: #ffffff;
 }
 .cud-bad-text {
-  color: #ff0000; /* 赤色にしただけ */
+  color: #ff0000;
   margin: 0;
   font-size: 14px;
 }
@@ -286,56 +489,133 @@ header p {
   margin: 8px 0 0 0;
 }
 
-/* --- 原則 4：レイアウトと余白 --- */
-.layout-bad {
-  background-color: #ffffff;
-  padding: 0 !important; /* 隙間なし */
+/* --- 原則 4：ビジュアル要素の使い分け --- */
+.visual-types-grid {
+  grid-template-columns: 1fr 1.2fr;
 }
-.layout-bad .title {
-  background-color: #ccc;
-  color: #111;
+.type-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+}
+.type-header {
+  font-size: 15px;
   font-weight: bold;
-  font-size: 13px;
-  margin: 0;
+  color: #1b3a4b;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #1b3a4b;
+  padding-bottom: 4px;
 }
-.layout-bad .list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.layout-bad .list li {
-  font-size: 13px;
-}
-.layout-bad .contact {
-  margin: 0;
+.type-body-desc {
   font-size: 12px;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.type-summary {
+  font-size: 12px;
+  margin: auto 0 0 0;
+  padding-top: 15px;
+  color: #333;
 }
 
-.layout-good {
+/* 図解の簡易フローデモ */
+.diagram-demo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #ffffff;
-}
-.layout-good .title {
-  background-color: #e0f2f1;
-  color: #00796b;
-  font-weight: bold;
-  font-size: 14px;
-  padding: 5px 10px;
-  margin: 0 0 10px 0;
+  border: 1px dashed #ccc;
+  padding: 15px 10px;
   border-radius: 4px;
 }
-.layout-good .list {
-  margin: 0 0 25px 0; /* 下に広い余白をあけて別グループ化 */
-  padding-left: 20px;
+.flow-step {
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #e0f2f1;
+  color: #00695c;
+  padding: 6px;
+  border-radius: 3px;
+  text-align: center;
+  flex: 1;
 }
-.layout-good .list li {
-  margin-bottom: 5px;
-  font-size: 14px;
+.flow-arrow {
+  font-size: 12px;
+  color: #00695c;
+  margin: 0 4px;
 }
-.layout-good .contact {
-  margin: 0;
-  padding-left: 10px;
-  font-size: 14px;
-  border-left: 3px solid #00796b;
+
+/* 表とグラフのサブレイアウト */
+.comparison-subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.comparison-box {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 12px;
+}
+.comparison-box h5 {
+  margin: 0 0 8px 0;
+  font-size: 12px;
+  color: #2c3e50;
+}
+.comparison-box p {
+  font-size: 10px;
+  color: #777;
+  margin-top: 0;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* 表デモ */
+.sub-demo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+}
+.sub-demo-table th, .sub-demo-table td {
+  border: 1px solid #ddd;
+  padding: 4px 6px;
+  text-align: center;
+}
+.sub-demo-table th {
+  background-color: #f1f1f1;
+}
+
+/* グラフデモ */
+.sub-demo-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.chart-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bar-name {
+  font-size: 10px;
+  width: 35px;
+  text-align: right;
+}
+.bar-track {
+  background-color: #eee;
+  flex-grow: 1;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.bar-fill {
+  background-color: #007bff;
+  height: 100%;
+  border-radius: 5px;
 }
 
 /* フッター */

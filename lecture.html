@@ -8,142 +8,180 @@
 <body>
     <header>
         <h1>📖 情報デザイン ビジュアル原則体験デモページ</h1>
-        <p>このページでは，Webデザインにおいて情報を的確に伝えるための「4つのビジュアル原則」について，極端な悪い例と良い例を比較しながらインタラクティブに学びます．</p>
+        <p>このページでは，Webデザインにおいて情報を的確に伝えるための「情報デザインの工夫」について，教科書の内容と連動した図解や対比を通してインタラクティブに学びます．</p>
     </header>
 
     <main class="container">
-        <!-- 原則 1：文字とフォントの工夫 -->
+        <!-- セクション 1：文字とフォントの工夫 -->
         <section class="demo-section">
-            <h2 class="section-title">原則 1：文字とフォントの工夫（可読性・視認性・判読性）</h2>
-            <p class="section-desc">文字の「形（書体）」「大きさ・太さ（ジャンプ率）」「行間」をCSSでコントロールし，読む人の負担を減らします．</p>
-            <div class="grid">
-                <!-- 悪い例①：装飾フォントの乱用と行間潰れ -->
-                <div class="card bad-example">
-                    <div class="example-header header-bad">🔴 極端な悪い例①（装飾過剰・行間崩壊）</div>
-                    <div class="demo-content font-bad-1">
-                        <h3>文化祭のお知らせ</h3>
-                        <p>今年のサレジオ祭は10月24日から25日に開催されます。クラス展示や模擬店が多数出店します。なお、校内は土足厳禁ですので上履きを忘れずに持参してください。ステージ発表は午前9時半から開始です。</p>
-                    </div>
-                    <div class="explanation">
-                        <span class="label">何が悪い？（暗号状態）</span>
-                        <ul>
-                            <li><strong>可読性・判読性の崩壊：</strong> 装飾が極端に強いファンタジー風のフォントを長文に適用したため，文字の形が判別できず暗号のようになっています．</li>
-                            <li><strong>行間（line-height）の無視：</strong> 行間が狭すぎて，上の行と下の行の文字が重なり合って潰れています．</li>
-                        </ul>
-                    </div>
-                </div>
+            <h2 class="section-title">原則 1：文字とフォントの工夫（書体・ジャンプ率・行間）</h2>
+            <p class="section-desc">文字の「形（書体）」「大きさ・太さ（強弱）」「行間」を適切に制御することで，読み手の視線をスムーズに誘導します．</p>
 
-                <!-- 悪い例②：ジャンプ率ゼロ -->
-                <div class="card bad-example">
-                    <div class="example-header header-bad">🔴 極端な悪い例②（ジャンプ率ゼロ・文字の壁）</div>
-                    <div class="demo-content font-bad-2">
-                        <h4>文化祭のお知らせ</h4>
-                        <p>今年のサレジオ祭は10月24日から25日に開催されます．クラス展示や模擬店が多数出店します．なお，校内は土足厳禁ですので上履きを忘れずに持参してください．ステージ発表は午前9時半から開始です．</p>
-                    </div>
-                    <div class="explanation">
-                        <span class="label">何が悪い？（情報の壁）</span>
-                        <ul>
-                            <li><strong>視認性の欠如：</strong> タイトル，見出し，本文の文字サイズと太さがすべて完全に同一（ジャンプ率ゼロ）なため，どこが重要情報なのか視線を向けるべき場所が全くわかりません．</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 良い例 -->
-            <div class="card good-example-wide">
-                <div class="example-header header-good">🟢 良い例（適切なジャンプ率と可読性の確保）</div>
-                <div class="demo-content font-good">
-                    <h3>文化祭のお知らせ</h3>
-                    <p>今年のサレジオ祭は10月24日から25日に開催されます．クラス展示や模擬店が多数出店します．なお，校内は土足厳禁ですので上履きを忘れずに持参してください．ステージ発表は午前9時半から開始です．</p>
-                </div>
-                <div class="explanation">
-                    <span class="label">ここがCSSの工夫！</span>
-                    <ul>
-                        <li><strong>明確な対比（ジャンプ率）：</strong> タイトルを大きく太くし，本文と明確な差をつけることで優先順位を明確にしています．</li>
-                        <li><strong>判読性の高いフォント：** 画面上で潰れず認識しやすいゴシック体や，文字の形状が判別しやすいよう配慮された「UDフォント（ユニバーサルデザインフォント）」を採用しています．</li>
-                        <li><strong>sufficientな行間（line-height: 1.6）：</strong> 行間に適切な余白をとることで，長文でもスムーズに読めるようにしています．</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 原則 2：配色ルールとコントラスト -->
-        <section class="demo-section">
-            <h2 class="section-title">原則 2：配色ルールとコントラスト（色の三属性とハレーション）</h2>
-            <p class="section-desc">色相（色合い），彩度（鮮やかさ），明度（明るさ）をコントロールし，4色以内に整理します．</p>
-            <div class="grid">
-                <!-- 悪い例①：低コントラストとノイズ -->
-                <div class="card bad-example">
-                    <div class="example-header header-bad">🔴 極端な悪い例①（視認不可＆意味のない多色）</div>
-                    <div class="demo-content color-bad-1">
-                        <p class="text-invisible">※重要なお知らせ：当日は上履きを忘れずにお持ちください．</p>
-                        <p class="text-rainbow">
-                            <span class="c1">文</span><span class="c2">化</span><span class="c3">祭</span>
-                            <span class="c4">の</span><span class="c5">ス</span><span class="c6">テ</span>
-                            <span class="c1">ー</span><span class="c2">ジ</span><span class="c3">を</span>
-                            <span class="c4">見</span><span class="c5">に</span><span class="c6">来</span>
-                            <span class="c1">て</span><span class="c2">く</span><span class="c3">だ</span>
-                            <span class="c4">さ</span><span class="c5">い</span><span class="c6">．</span>
-                        </p>
-                    </div>
-                    <div class="explanation">
-                        <span class="label">何が悪い？</span>
-                        <ul>
-                            <li><strong>明度コントラストの欠如：</strong> 薄いグレーの背景に白い文字を配置したため，明度（明るさ）の差がほとんどなく，文字が完全に背景に溶け込んでしまっています．</li>
-                            <li><strong>情報ノイズ（多色使い）：</strong> 意味のないカラフルな配色により，視線が散らばって何が重要なのか理解できません．</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- 悪い例②：ハレーション -->
-                <div class="card bad-example">
-                    <div class="example-header header-bad">🔴 極端な悪い例②（補色同士によるハレーション）</div>
-                    <div class="demo-content color-bad-2">
-                        <div class="halation-box">
-                            <p>【警告】校内は撮影禁止！無断アップロードは厳禁です！</p>
-                        </div>
-                    </div>
-                    <div class="explanation">
-                        <span class="label">何が悪い？</span>
-                        <ul>
-                            <li><strong>ハレーション（目の疲労）：</strong> 色相環で互いに向かい合う位置にある「補色」の関係にある鮮やかな原色同士（彩度が非常に高い緑背景に赤文字）を，明度差がない状態で重ねたため，文字の境界がぶれてギラギラと見え，目が激しく疲れます．</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 良い例 -->
-            <div class="card good-example-wide">
-                <div class="example-header header-good">🟢 良い例（明度コントラストの適正化と4色ルール）</div>
-                <div class="demo-content color-good">
-                    <div class="badge-main">開催場所</div>
-                    <p class="body-text">第一体育館メインステージおよび各教室</p>
-                    <p class="alert-text">※重要：熱中症および感染防止対策のため，校内はこまめな換気と水分補給をお願いいたします．</p>
-                </div>
-                <div class="explanation">
-                    <span class="label">ここがCSSの工夫！</span>
-                    <ul>
-                        <li><strong>高い明度コントラスト：</strong> 背景（ほぼ白）と文字（ダークグレー）の明度（明るさ）の差を最大化し，視認性を高めています．</li>
-                        <li><strong>配色4色ルール：</strong> 使用する色を「背景色（白）」「文字基本色（ダークグレー）」「メインカラー（濃い紺）」「強調色（濃いオレンジ）」の4色以内に絞り，情報に秩序を与えています．</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 原則 3：カラーユニバーサルデザイン -->
-        <section class="demo-section">
-            <h2 class="section-title">原則 3：カラーユニバーサルデザイン（色だけに頼らない強調）</h2>
-            <p class="section-desc">人間の色覚多様性に配慮し，色相（色合い）の違いだけでなく，「形・記号」の違いを組み合わせます．</p>
+            <h3>1-1. 書体（フォント）の種類による印象の違い</h3>
+            <p>書体にはそれぞれ異なる特徴やイメージ（印象）があり，情報の目的に合わせて使い分けることが重要です．</p>
             
+            <div class="grid font-comparison-grid">
+                <!-- ゴシック体 -->
+                <div class="font-sample-card type-gothic">
+                    <div class="font-tag tag-gothic">ゴシック体（Sans-serif）</div>
+                    <p class="font-preview">聖サレジオ学園文化祭</p>
+                    <p class="font-desc"><strong>特徴：</strong> 縦横の線の太さがほぼ均一．<br><strong>印象：</strong> 親しみやすい，力強い，現代的．<br><strong>用途：</strong> 画面上の文字（ディスプレイ表示）や，遠くから見る見出しに適しています．</p>
+                </div>
+                <!-- 明朝体 -->
+                <div class="font-sample-card type-mincho">
+                    <div class="font-tag tag-mincho">明朝体（Serif）</div>
+                    <p class="font-preview">聖サレジオ学園文化祭</p>
+                    <p class="font-desc"><strong>特徴：</strong> 横線が細く，縦線が太い．端に「ウロコ」と呼ばれる飾りがある．<br><strong>印象：</strong> 上品，伝統的，格式高い，文学的．<br><strong>用途：</strong> 教科書や小説など，紙に印刷された長文を読むのに適しています．画面上では線が細くなりやすく，視認性が落ちることがあります．</p>
+                </div>
+                <!-- 丸ゴシック体 -->
+                <div class="font-sample-card type-round">
+                    <div class="font-tag tag-round">丸ゴシック体</div>
+                    <p class="font-preview">聖サレジオ学園文化祭</p>
+                    <p class="font-desc"><strong>特徴：</strong> ゴシック体の角を丸くした書体．<br><strong>印象：</strong> 柔らかい，優しい，安心感がある，幼児向け．<br><strong>用途：</strong> 注意書きや，親しみやすさを特に強調したいポスターなどに適しています．</p>
+                </div>
+                <!-- ポップ体・装飾 -->
+                <div class="font-sample-card type-pop">
+                    <div class="font-tag tag-pop">ポップ体・装飾体</div>
+                    <p class="font-preview">聖サレジオ学園文化祭</p>
+                    <p class="font-desc"><strong>特徴：</strong> 個性的でインパクトのあるデザイン書体．<br><strong>印象：</strong> 賑やか，個性的，カジュアル，装飾的．<br><strong>用途：</strong> タイトルの一部など，一部で目立たせるには有効ですが，長文に使うと著しく可読性が下がります．</p>
+                </div>
+            </div>
+
+            <h3>1-2. 文字の大きさ・太さによる情報の階層構造</h3>
+            <p><strong>「タイトル ＞ 小見出し ＞ 本文」</strong> というように，大きい文字から小さい文字へ，太い文字から細い文字へと順序がしっかりしていれば，読み手は視線を自然に滑らせて，文書の流れに沿って意味を追うことができます（情報の階層化）．</p>
+
+            <div class="grid">
+                <!-- 悪い例：階層構造がない（文字の壁） -->
+                <div class="card bad-example">
+                    <div class="example-header header-bad">🔴 階層のない悪い例（すべて同一サイズ・太さ）</div>
+                    <div class="demo-content font-bad-2">
+                        <h4>第52回 聖サレジオ学園文化祭</h4>
+                        <p>今年のサレジオ祭は10月24日から25日に開催されます．メインテーマは「創造と共創」です．詳細なプログラムは体育館ステージにて実施いたしますので，皆様のご来校を心よりお待ちしております．</p>
+                    </div>
+                    <div class="explanation">
+                        <span class="label">何が悪い？</span>
+                        <ul>
+                            <li><strong>強弱がない：</strong> すべての情報が均一なため，どこが見出しでどこが本文なのか，一見して区別がつきません．</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 良い例：階層構造の確立 -->
+                <div class="card good-example">
+                    <div class="example-header header-good">🟢 階層のある良い例（タイトル ＞ 小見出し ＞ 本文）</div>
+                    <div class="demo-content font-hierarchy">
+                        <h3 class="hierarchy-title">第52回 聖サレジオ学園文化祭</h3>
+                        <h4 class="hierarchy-subtitle">〜青春と創造のメインステージ〜</h4>
+                        <p class="hierarchy-body">今年のサレジオ祭は10月24日から25日に開催されます．メインテーマは「創造と共創」です．詳細なプログラムは体育館ステージにて実施いたしますので，皆様のご来校を心よりお待ちしております．</p>
+                    </div>
+                    <div class="explanation">
+                        <span class="label">ここがCSSの工夫！</span>
+                        <ul>
+                            <li><strong>視線の流れ：</strong> 最も重要なタイトルを大きく太く（`font-size: 20px` / `bold`），サブ見出しを中間（`15px` / `bold`），本文を標準（`13px` / `normal`）と整理することで，情報の優先順位が直感的にわかります．</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- セクション 2：配色ルールとコントラスト -->
+        <section class="demo-section">
+            <h2 class="section-title">原則 2：配色ルールとコントラスト（色の三属性とハレーション・補色）</h2>
+            <p class="section-desc">色相（色合い），彩度（鮮やかさ），明度（明るさ）をコントロールし，4色以内に整理します．</p>
+
+            <h3>2-1. 色の三属性のビジュアル図解</h3>
+            <div class="attributes-container">
+                <!-- 色相 -->
+                <div class="attr-row">
+                    <div class="attr-label"><strong>色相 (Hue)：</strong> 赤・黄・緑・青といった「色み」の違い．</div>
+                    <div class="color-bar bar-hue"></div>
+                </div>
+                <!-- 彩度 -->
+                <div class="attr-row">
+                    <div class="attr-label"><strong>彩度 (Saturation)：</strong> 色の「鮮やかさ」の度合い．右に行くほど鮮やかで，左に行くほどくすんだ無彩色（グレー）に近づきます．</div>
+                    <div class="color-bar bar-saturation"></div>
+                </div>
+                <!-- 明度 -->
+                <div class="attr-row">
+                    <div class="attr-label"><strong>明度 (Lightness)：</strong> 色の「明るさ」の度合い．下に行くほど暗く（黒），上に行くほど明るく（白）なります．</div>
+                    <div class="color-bar bar-lightness"></div>
+                </div>
+            </div>
+
+            <h3>2-2. 補色と類似色の効果</h3>
+            <div class="grid color-harmony-grid">
+                <!-- 補色 -->
+                <div class="harmony-card card-complementary">
+                    <h4>補色（Complementary Color）</h4>
+                    <p class="harmony-desc">色相環で向かい合う位置にある色の組み合わせ（例：緑と赤，青とオレンジ）．</p>
+                    <div class="harmony-demo demo-comp">
+                        <div class="comp-box-1">赤地に緑文字</div>
+                        <div class="comp-box-2">青地にオレンジ文字</div>
+                    </div>
+                    <p class="harmony-effect"><strong>効果と注意：</strong> 互いの色を引き立てる強い対比効果がありますが，**明度（明るさ）の差をつけずに高彩度の補色同士を重ねると，文字の境界がチカチカする「ハレーション」を引き起こし，非常に読みづらくなります**．</p>
+                </div>
+                <!-- 類似色 -->
+                <div class="harmony-card card-analogous">
+                    <h4>類似色（Analogous Color）</h4>
+                    <p class="harmony-desc">色相環で隣り合う位置にある，性質の似た色の組み合わせ（例：青と水色，緑と黄緑）．</p>
+                    <div class="harmony-demo demo-anal">
+                        <div class="anal-box-1">青地に水色文字</div>
+                        <div class="anal-box-2">黄緑地に緑文字</div>
+                    </div>
+                    <p class="harmony-effect"><strong>効果と注意：</strong> 全体に調和がとれ，まとまりや安心感のある落ち着いた印象を与えます．ただし，コントラストが低くなりやすいため，明度差をつけて文字をくっきり見せる工夫が必要です．</p>
+                </div>
+            </div>
+
+            <h3>2-3. 配色デモ：ハレーションの解消とコントラスト</h3>
+            <div class="grid">
+                <!-- 悪い例：ハレーション -->
+                <div class="card bad-example">
+                    <div class="example-header header-bad">🔴 補色同士のハレーション（緑背景に赤文字）</div>
+                    <div class="demo-content color-bad-2">
+                        <p>【警告】校内は撮影禁止！無断アップロードは厳禁です！</p>
+                    </div>
+                    <div class="explanation">
+                        <span class="label">なぜ見づらい？</span>
+                        <ul>
+                            <li><strong>明度差ゼロの高彩度補色：** 背景の緑と文字の赤は，彩度（鮮やかさ）が極端に高く，かつ「明度（明るさ）」がほぼ同じであるため，脳の視覚処理が混乱し，文字の境界がギラギラとぶれて見えます．</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 良い例：明度コントラストの確保 -->
+                <div class="card good-example">
+                    <div class="example-header header-good">🟢 明度コントラストを確保した配色</div>
+                    <div class="demo-content color-good-contrast">
+                        <p>【警告】校内は撮影禁止！無断アップロードは厳禁です！</p>
+                    </div>
+                    <div class="explanation">
+                        <span class="label">ここがCSSの工夫！</span>
+                        <ul>
+                            <li><strong>大きな明度差（コントラスト）：</strong> 暗い紺色の背景に白い文字，または白い背景に暗いグレーの文字のように，**「明度の差」を極大化**することで，ハレーションを完全に防止して視認性を高めています．</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- セクション 3：カラーユニバーサルデザイン -->
+        <section class="demo-section">
+            <h2 class="section-title">原則 3：カラーユニバーサルデザイン（CUD）</h2>
+            
+            <div class="cud-info-box">
+                <h4>⚠️ カラーユニバーサルデザイン（CUD）とは？</h4>
+                <p>人間の色覚（色の見え方）には多様性があります．一部の色（特に赤と緑など）の区別が難しい人や，高齢で色の判別がしにくくなっている人など，**すべての人が色による違いを正確に認識し，誤解なく情報を取得できるように配慮して設計されたデザイン**を「カラーユニバーサルデザイン（CUD）」と呼びます．</p>
+            </div>
+
             <div class="simulator-panel">
                 <button id="grayscale-btn" onclick="toggleGrayscale()">色覚多様性（モノクロ）シミュレータを起動</button>
-                <p class="sim-note">※ボタンを押すと，下の比較カードが白黒（明度のみ）になり，色の見え方が異なる人の視界を再現できます．</p>
+                <p class="sim-note">※ボタンを押すと，下の比較カードが白黒（明度のみ）になり，色覚多様性を持つ方や，白黒印刷時の見え方を体験できます．</p>
             </div>
 
             <div class="grid" id="cud-demo-grid">
                 <!-- 悪い例：色相のみに依存 -->
                 <div class="card bad-example">
-                    <div class="example-header header-bad">🔴 極端な悪い例（色だけで区別させる）</div>
+                    <div class="example-header header-bad">🔴 色だけで重要度を区別させる（CUD非対応）</div>
                     <div class="demo-content cud-bad">
                         <p>以下の赤い文字が，本日の最重要項目です：</p>
                         <p class="cud-bad-text">校内での撮影は事前に許可を得た保護者のみ可能です．</p>
@@ -151,14 +189,14 @@
                     <div class="explanation">
                         <span class="label">シミュレータ起動時の変化</span>
                         <ul>
-                            <li>シミュレータを起動（モノクロ化）すると，**「赤色にするだけ」の強調は周囲の文字と全く見分けがつかなくなります**．赤と緑の区別が難しい人や，印刷物になった際にも情報が完全に消失します．</li>
+                            <li>シミュレータを起動（モノクロ化）すると，**「赤色にするだけ」の強調は周囲の黒文字と全く見分けがつかなくなります**．色覚タイプによっては，「赤」が「黒い影」のように見えてしまい，重要と気付けないリスクがあります．</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- 良い例：色＋形の併用 -->
                 <div class="card good-example">
-                    <div class="example-header header-good">🟢 良い例（色＋形・記号の併用）</div>
+                    <div class="example-header header-good">🟢 色＋形・記号を併用する（CUD対応）</div>
                     <div class="demo-content cud-good">
                         <p>以下の項目が，本日の最重要項目です：</p>
                         <div class="cud-good-box">
@@ -169,58 +207,65 @@
                     <div class="explanation">
                         <span class="label">シミュレータ起動時の変化</span>
                         <ul>
-                            <li>モノクロ化しても，**「太字」「枠線（境界）」「警告アイコン（⚠️）」という形（視覚情報）が残るため，誰にとっても重要箇所であることが一目で伝わります**．</li>
+                            <li>モノクロ化しても，**「太字」「境界線（枠）」「警告アイコン（⚠️）」という形（視覚情報）が残るため，色が見えなくても重要箇所であることが確実に伝わります**．</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 原則 4：レイアウトと余白 -->
+        <!-- セクション 4：図解・表・グラフの使い分け -->
         <section class="demo-section">
-            <h2 class="section-title">原則 4：レイアウトと余白（近接・整列・視線誘導）</h2>
-            <p class="section-desc">関連する情報は近づけ（近接），端を揃え（整列），適切な余白（margin / padding）で視線を誘導します．</p>
-            <div class="grid">
-                <!-- 悪い例：余白なしと誤った近接 -->
-                <div class="card bad-example">
-                    <div class="example-header header-bad">🔴 極端な悪い例（余白ゼロ＆誤った近接）</div>
-                    <div class="demo-content layout-bad">
-                        <p class="title">持ち物リスト</p>
-                        <ul class="list">
-                            <li>上履き</li>
-                            <li>招待ハガキ</li>
-                        </ul>
-                        <p class="title" style="margin-top: 0;">緊急連絡先</p>
-                        <p class="contact">生徒会事務局：03-XXXX-XXXX</p>
+            <h2 class="section-title">原則 4：ビジュアル要素の使い分け（図解・表・グラフ）</h2>
+            <p class="section-desc">伝えたい情報の性質に応じて，「図解」「表」「グラフ」を使い分けることで，読み手の直感的な理解を促します．</p>
+
+            <div class="grid visual-types-grid">
+                <!-- 図解の役割 -->
+                <div class="type-card card-diagram">
+                    <div class="type-header">💡 図解（Diagram）</div>
+                    <p class="type-body-desc">物事の流れ，因果関係，つながりや構造を示すために用います．文字ばかりの解説を，矢印や囲み線を使ってビジュアル化します．</p>
+                    <!-- 図解デモ：文化祭の受付フロー -->
+                    <div class="diagram-demo">
+                        <div class="flow-step">受付でハガキ提示</div>
+                        <div class="flow-arrow">➔</div>
+                        <div class="flow-step">上履きに履き替え</div>
+                        <div class="flow-arrow">➔</div>
+                        <div class="flow-step">パンフレット受取</div>
                     </div>
-                    <div class="explanation">
-                        <span class="label">何が悪い？</span>
-                        <ul>
-                            <li><strong>余白ゼロ（息苦しさ）：</strong> 文字がカードの枠線や他の行と完全に張り付いており，非常に窮屈で読みづらいです．</li>
-                            <li><strong>近接の無視：</strong> 「持ち物リスト」と，無関係な次の見出し「緊急連絡先」の間隔が狭すぎて，どこからどこまでが一つのグループなのか境界がわかりません．</li>
-                        </ul>
-                    </div>
+                    <p class="type-summary"><strong>役割：** 関係性やステップの直感的な理解を促す．</p>
                 </div>
 
-                <!-- 良い例：近接と整列 -->
-                <div class="card good-example">
-                    <div class="example-header header-good">🟢 良い例（適切な近接と整列）</div>
-                    <div class="demo-content layout-good">
-                        <p class="title">持ち物リスト</p>
-                        <ul class="list">
-                            <li>上履き</li>
-                            <li>招待ハガキ</li>
-                        </ul>
-                        <p class="title">緊急連絡先</p>
-                        <p class="contact">生徒会事務局：03-XXXX-XXXX</p>
+                <!-- 表とグラフの使い分け -->
+                <div class="type-card card-table-graph">
+                    <div class="type-header">📊 表とグラフの使い分け</div>
+                    
+                    <div class="comparison-subgrid">
+                        <div class="comparison-box box-table">
+                            <h5>表（Table）の適性</h5>
+                            <p><strong>データの正確な値を表したい場合</strong>に適しています．<br>（例：各科目の点数の数値，クラス模擬店の配置詳細，時刻ごとの正確なスケジュール）．</p>
+                            <table class="sub-demo-table">
+                                <tr><th>模擬店</th><th>売上(円)</th></tr>
+                                <tr><td>焼そば</td><td>12,400</td></tr>
+                                <tr><td>たこ焼</td><td>15,800</td></tr>
+                            </table>
+                        </div>
+                        <div class="comparison-box box-chart">
+                            <h5>グラフ（Graph）の適性</h5>
+                            <p><strong>データの全体的な傾向や割合，変化を見せたい場合</strong>に適しています．直感的な理解を促します．<br>（例：売上の推移，人気の比較）．</p>
+                            <!-- CSSで再現した簡易棒グラフ -->
+                            <div class="sub-demo-chart">
+                                <div class="chart-bar-row">
+                                    <span class="bar-name">焼そば</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 78%;"></div></div>
+                                </div>
+                                <div class="chart-bar-row">
+                                    <span class="bar-name">たこ焼</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 100%;"></div></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="explanation">
-                        <span class="label">ここがCSSの工夫！</span>
-                        <ul>
-                            <li><strong>近接（グループ化）：</strong> 持ち物リストの下に広い余白（`margin-bottom: 25px`）を空け，「別の話題であること」を物理的な距離で示しています．</li>
-                            <li><strong>整列：** 左端が完全に縦一列に揃っているため，視線が「上から下」へと迷うことなく綺麗に流れます（Zパターン・Fパターンの視線誘導）．</li>
-                        </ul>
-                    </div>
+                    <p class="type-summary"><strong>役割：** 正確な値は「表」，全体の傾向は「グラフ」．</p>
                 </div>
             </div>
         </section>
