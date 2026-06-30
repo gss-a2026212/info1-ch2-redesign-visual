@@ -1,26 +1,61 @@
-/* style.css (初期状態の仕様) */
+/* style.css (初期状態：情報デザインの原則を無視した伝わらないスタイル) */
+
+/* 1．フォントと文字の工夫の無視（可読性・視認性・判読性の欠如） */
 body {
-  font-family: sans-serif;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  /* 背景色と文字色はデフォルトのまま（白背景に黒文字） */
+  font-family: "MS Serif", "New York", "Times New Roman", serif; /* 細くて読みにくい明朝体 */
+  line-height: 1.0; /* 行間がぎちぎちで文字が重なって読みづらい */
+  font-size: 14px;
+  max-width: 100%;
+  margin: 0;
+  padding: 0; /* 画面の端に文字が張り付き，余白がない */
 }
 
-/* テーブルの基本的な線のみ指定．ここから見栄えを整える */
+/* 2．配色ルールの無視（ハレーションと低コントラスト） */
+body {
+  background-color: #00ff00; /* 目がチカチカする原色の緑色（ハレーション） */
+  color: #ff0000; /* 原色の赤色の文字 */
+}
+
+/* ジャンプ率（対比）の欠如：見出しと本文の区別がつかない */
+h1 {
+  font-size: 15px; /* 本文とほぼ同じ大きさ */
+  font-weight: normal; /* 太字にしない */
+  color: #ff0000;
+  margin: 0;
+}
+h2 {
+  font-size: 14px;
+  font-weight: normal;
+  color: #ff0000;
+  margin: 0;
+}
+
+/* 3．カラーユニバーサルデザインの無視（色だけに頼った強調） */
+/* 警告文なのに「色を変えただけ」で，太字や境界線・アイコンによる補完がない */
+.alert-message {
+  color: #ff0000;
+  font-weight: normal;
+}
+
+/* 4．余白・レイアウトの無視（近接と整列の欠如） */
 table {
   border-collapse: collapse;
   width: 100%;
-  margin-top: 10px;
+  margin: 0; /* 余白がなく境界がわからない */
 }
 th, td {
-  border: 1px solid #ccc;
-  padding: 8px;
+  border: 1px solid #ff0000;
+  padding: 0; /* セル内の余白がなく，文字が枠線に完全に張り付いて読めない */
+  text-align: left;
 }
 
-/* 
-  生徒は以下に，情報デザインの原則（4色配色ルール，コントラスト比，
-  カラーユニバーサルデザイン，近接・整列のための余白など）に沿って，
-  スタイル定義を追加していきます．
-*/
+/* リストの余白と構造の崩壊 */
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; /* 箇条書き記号を消して，情報のまとまりをわからなくしている */
+}
+p {
+  margin: 0;
+  padding: 0;
+}
