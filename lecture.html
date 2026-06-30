@@ -84,6 +84,8 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+
             <h3>1-3. ユニバーサルデザインフォント（UDフォント）の特長</h3>
             <div class="font-info-box">
                 <h4>💡 ユニバーサルデザインフォント（UDフォント）とは？</h4>
@@ -91,44 +93,62 @@
                 高齢者や，視力が低下している人，読み書きに障害（ディスレクシアなど）を持つ人など，誰もが正確に文字情報を認識できるように，文字の細部に工夫が施されています．</p>
             </div>
 
-            <p class="demo-intro-text">以下は，従来のフォントとUDフォントの視覚的な違いの比較です．文字の細部（隙間の広さや濁点の離れ具合）を確認してみましょう．</p>
+            <p class="demo-intro-text">以下は，従来のフォントとUDフォントの比較です．でかい文字で細部（隙間の広さや濁点の離れ具合）を確認してみましょう．</p>
 
-            <div class="grid">
-                <!-- 普通のフォント -->
-                <div class="card bad-example">
-                    <div class="example-header header-bad">🔴 従来のフォント（MS ゴシックなど）</div>
-                    <div class="demo-content font-compare-flex">
-                        <div class="char-box"><span class="compare-char char-normal">ブ</span></div>
-                        <div class="char-box"><span class="compare-char char-normal">S</span></div>
-                        <div class="char-box"><span class="compare-char char-normal">3</span></div>
-                        <div class="char-box"><span class="compare-char char-normal">6</span></div>
-                    </div>
-                    <div class="explanation">
-                        <span class="label">従来のフォントの傾向</span>
-                        <ul>
-                            <li>濁点（ ゙ ）が小さく文字と近いため，文字が潰れて「プ」や「フ」と見間違えやすくなります．</li>
-                            <li>「S」「3」「6」などの隙間が狭く，文字が小さくなったときにつぶれて判別しにくくなります．</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- UDフォント -->
-                <div class="card good-example">
-                    <div class="example-header header-good">🟢 UDフォント（BIZ UDPゴシック）</div>
-                    <div class="demo-content font-compare-flex">
-                        <div class="char-box"><span class="compare-char char-ud">ブ</span></div>
-                        <div class="char-box"><span class="compare-char char-ud">S</span></div>
-                        <div class="char-box"><span class="compare-char char-ud">3</span></div>
-                        <div class="char-box"><span class="compare-char char-ud">6</span></div>
-                    </div>
-                    <div class="explanation">
-                        <span class="label">UDフォントの工夫</span>
-                        <ul>
-                            <li><strong>濁点（ ゙ ）を大きく，文字本体から離して配置</strong>しているため，「ブ」と「プ」の誤読を防ぎます．</li>
-                            <li><strong>文字の内側の空間（ふところ）を広くあけ，線の先端をすっきりと整理</strong>しているため，文字が小さくなっても潰れず形がはっきりわかります．</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="ud-table-wrapper">
+                <table class="ud-compare-table">
+                    <thead>
+                        <tr>
+                            <th class="col-type">フォントの種類</th>
+                            <th class="col-chars">文字見本（でかく表示）</th>
+                            <th class="col-desc">特徴と誤読を防ぐ工夫</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 従来フォント -->
+                        <tr class="tr-bad">
+                            <td class="font-type-cell">
+                                <span class="badge-bad">従来のフォント</span>
+                                <div class="font-name-sub">MS ゴシック など</div>
+                            </td>
+                            <td class="chars-cell">
+                                <div class="compare-row-flex">
+                                    <div class="char-box-s"><span class="compare-char char-normal">ブ</span></div>
+                                    <div class="char-box-s"><span class="compare-char char-normal">S</span></div>
+                                    <div class="char-box-s"><span class="compare-char char-normal">3</span></div>
+                                    <div class="char-box-s"><span class="compare-char char-normal">6</span></div>
+                                </div>
+                            </td>
+                            <td class="desc-cell">
+                                <ul>
+                                    <li>濁点（ ゙ ）が小さく文字と近いため，文字が潰れて「プ」や「フ」と見間違えやすくなります．</li>
+                                    <li>「S」「3」「6」などの隙間が狭く，文字が小さくなったときにつぶれて判別しにくくなります．</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <!-- UDフォント -->
+                        <tr class="tr-good">
+                            <td class="font-type-cell">
+                                <span class="badge-good">UDフォント</span>
+                                <div class="font-name-sub">BIZ UDPゴシック</div>
+                            </td>
+                            <td class="chars-cell">
+                                <div class="compare-row-flex">
+                                    <div class="char-box-s"><span class="compare-char char-ud">ブ</span></div>
+                                    <div class="char-box-s"><span class="compare-char char-ud">S</span></div>
+                                    <div class="char-box-s"><span class="compare-char char-ud">3</span></div>
+                                    <div class="char-box-s"><span class="compare-char char-ud">6</span></div>
+                                </div>
+                            </td>
+                            <td class="desc-cell">
+                                <ul>
+                                    <li><strong>濁点（ ゙ ）を大きく，文字本体から離して配置</strong>しているため，「ブ」と「プ」の誤読を防ぎます．</li>
+                                    <li><strong>文字の内側の空間（ふところ）を広くあけ，線の先端をすっきりと整理</strong>しているため，文字が小さくなっても潰れず形がはっきりわかります．</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -303,7 +323,7 @@
                 <!-- ツリー図 -->
                 <div class="diagram-type-card">
                     <div class="diag-type-tag">2. ツリー図（木構造・階層構造）</div>
-                    <p class="diag-desc"><strong>役割：</strong> 全体と部分の包含関係や，組織・構造の上下関係を示すのに適しています．</p>
+                    <p class="diag-desc"><strong>役割：</strong> 全体と部分の包含関係や，組織・構造 of の上下関係を示すのに適しています．</p>
                     <div class="diagram-demo-box db-tree">
                         <div class="tree-root-node">サレジオ祭実行委員会</div>
                         <div class="tree-branches-container">
