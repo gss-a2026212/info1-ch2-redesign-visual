@@ -1,0 +1,269 @@
+/* lecture.css */
+
+/* 全体の基本設定 */
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  background-color: #f4f7f6;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #1b3a4b;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
+}
+header h1 {
+  margin: 0 0 10px 0;
+  font-size: 26px;
+}
+header p {
+  margin: 0;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* デモセクション */
+.demo-section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 25px;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 18px;
+  color: #1b3a4b;
+  border-left: 5px solid #1b3a4b;
+  padding-left: 10px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+/* グリッドレイアウト */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* カードデザイン */
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.example-header {
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.header-bad {
+  background-color: #ffebee;
+  color: #c62828;
+  border-bottom: 1px solid #ffcdd2;
+}
+.header-good {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-bottom: 1px solid #c8e6c9;
+}
+
+.demo-content {
+  padding: 20px;
+  flex-grow: 1;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.explanation {
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  font-size: 13px;
+  color: #555555;
+}
+.explanation ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.explanation li {
+  margin-bottom: 5px;
+}
+.explanation li:last-child {
+  margin-bottom: 0;
+}
+
+/* --- 原則 1：フォント指定 --- */
+.font-bad {
+  font-family: 'Times New Roman', Times, serif; /* かすれる明朝体 */
+  line-height: 1.0 !important; /* 行間がつぶれる */
+}
+.font-bad h3 {
+  font-size: 14px; /* 本文と同じ大きさ */
+  font-weight: normal;
+  margin: 0 0 5px 0;
+}
+.font-bad p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.font-good {
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+.font-good h3 {
+  font-size: 18px; /* 見出しを強調 */
+  font-weight: bold;
+  color: #1b3a4b;
+  margin: 0 0 10px 0;
+}
+.font-good p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* --- 原則 2：配色・コントラスト --- */
+.color-bad-contrast {
+  background-color: #ffffff;
+  color: #aaaaaa; /* 明度差が足りない */
+  font-weight: bold;
+}
+
+.color-bad-halation {
+  background-color: #00ff00; /* 原色の緑 */
+  color: #ff0000; /* 原色の赤 */
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.color-bad-halation p {
+  margin: 0;
+}
+
+.color-good {
+  background-color: #ffffff;
+  color: #333333;
+}
+.color-good .badge-main {
+  background-color: #1b3a4b; /* テーマカラー */
+  color: #ffffff;
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+.color-good .body-text {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+}
+.color-good .alert-text {
+  color: #e65100; /* 強調色のオレンジ */
+  font-weight: bold;
+  margin: 0;
+}
+
+/* --- 原則 3：カラーユニバーサルデザイン --- */
+.cud-bad {
+  background-color: #ffffff;
+}
+.cud-bad-text {
+  color: #ff0000; /* 赤色にしただけ */
+  margin: 0;
+}
+
+.cud-good {
+  background-color: #ffffff;
+}
+.cud-good-box {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 2px solid #c62828; /* 枠線 */
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cud-good-box strong {
+  font-weight: bold;
+  text-decoration: underline; /* 下線も追加 */
+}
+
+/* --- 原則 4：レイアウトと余白 --- */
+.layout-bad {
+  background-color: #ffffff;
+  padding: 0 !important; /* 隙間なし */
+}
+.layout-bad .title {
+  background-color: #ccc;
+  color: #111;
+  font-weight: bold;
+  font-size: 13px;
+  margin: 0;
+}
+.layout-bad .list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.layout-bad .contact {
+  margin: 0;
+  font-size: 12px;
+}
+
+.layout-good {
+  background-color: #ffffff;
+}
+.layout-good .title {
+  background-color: #e0f2f1;
+  color: #00796b;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 5px 10px;
+  margin: 0 0 10px 0;
+  border-radius: 4px;
+}
+.layout-good .list {
+  margin: 0 0 25px 0; /* 下に広い余白をあけてグループ化 */
+  padding-left: 20px;
+}
+.layout-good .list li {
+  margin-bottom: 5px;
+}
+.layout-good .contact {
+  margin: 0;
+  padding-left: 10px;
+  font-size: 14px;
+  border-left: 3px solid #00796b;
+}
+
+/* フッター */
+footer {
+  background-color: #2c3e50;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 50px;
+  font-size: 13px;
+}
+footer p {
+  margin: 0 0 5px 0;
+}
+footer p:last-child {
+  margin: 0;
+}

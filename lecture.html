@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>情報デザイン解説：伝えるためのビジュアルデザイン原則</title>
+    <link rel="stylesheet" href="lecture.css">
+</head>
+<body>
+    <header>
+        <h1>📖 情報デザイン ビジュアル原則デモページ</h1>
+        <p>このページでは，Webデザインにおいて情報を的確に伝えるための「4つの原則」について，実際のHTMLとCSSの表示を比較しながら学びます．</p>
+    </header>
+
+    <main class="container">
+        <!-- 原則 1：文字とフォントの工夫 -->
+        <section class="demo-section">
+            <h2 class="section-title">原則 1：文字とフォントの工夫（可読性・視認性・判読性）</h2>
+            <div class="grid">
+                <div class="card bad-example">
+                    <div class="example-header header-bad">🔴 悪い例（視認性・可読性の欠如）</div>
+                    <div class="demo-content font-bad">
+                        <h3>避難訓練のお知らせ</h3>
+                        <p>避難訓練を次の通り実施しますので全員必ず参加してください。当日は動きやすい服装で来てください。なお、雨天の場合は体育館で実施しますので、上履きを忘れずに持参してください。時間は午前10時からです。</p>
+                    </div>
+                    <div class="explanation">
+                        <ul>
+                            <li>見出しと本文の強弱（ジャンプ率）がなく，どこがタイトルか一目でわかりません．</li>
+                            <li>行間（`line-height`）がぎちぎちで文字同士が重なり，読むのが苦痛です．</li>
+                            <li>細い明朝体フォントは画面上で潰れやすく，視認性が低下します．</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card good-example">
+                    <div class="example-header header-good">🟢 良い例（高い可読性と明確な対比）</div>
+                    <div class="demo-content font-good">
+                        <h3>避難訓練のお知らせ</h3>
+                        <p>避難訓練を次の通り実施しますので全員必ず参加してください．当日は動きやすい服装で来てください．なお，雨天の場合は体育館で実施しますので，上履きを忘れずに持参してください．時間は午前10時からです．</p>
+                    </div>
+                    <div class="explanation">
+                        <ul>
+                            <li>見出しを大きく太くし，本文と明確な差（対比）をつけて優先順位を明確にしています．</li>
+                            <li>適切な行間（`line-height: 1.6`）を空けることで，文章がスムーズに読めます．</li>
+                            <li>画面上でも線が潰れず認識しやすいゴシック体（`sans-serif`）を使用しています．</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 原則 2：配色ルールとコントラスト -->
+        <section class="demo-section">
+            <h2 class="section-title">原則 2：配色ルールとコントラスト（コントラスト比 4.5:1 以上）</h2>
+            <div class="grid">
+                <div class="card bad-example">
+                    <div class="example-header header-bad">🔴 悪い例①（コントラスト比の不足）</div>
+                    <div class="demo-content color-bad-contrast">
+                        <p>※重要なお知らせ：当日は水分を持参してください．</p>
+                    </div>
+                    <div class="example-header header-bad" style="margin-top: 15px;">🔴 悪い例②（ハレーションによる疲労）</div>
+                    <div class="demo-content color-bad-halation">
+                        <p>避難場所：第一グラウンド（雨天時は体育館）</p>
+                    </div>
+                    <div class="explanation">
+                        <ul>
+                            <li>悪い例①は，白背景に対して文字が薄いグレーであるため，非常に見づらく読み飛ばされる危険があります．</li>
+                            <li>悪い例②は，鮮やかすぎる原色（緑背景に赤文字）が隣り合うことで，境界線がギラギラとぶれて見える「ハレーション」が発生し，目が極端に疲れます．</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card good-example">
+                    <div class="example-header header-good">🟢 良い例（適切な明度差と4色設計）</div>
+                    <div class="demo-content color-good">
+                        <div class="badge-main">避難場所</div>
+                        <p class="body-text">第一グラウンド（雨天時は体育館）</p>
+                        <p class="alert-text">※重要：当日は水分を必ず持参してください．</p>
+                    </div>
+                    <div class="explanation">
+                        <ul>
+                            <li>背景色（白）と文字色（ダークグレー）の明度差（コントラスト）を十分に大きくし，くっきりと見せています．</li>
+                            <li>色数を全体で4色以内（背景・文字・テーマ紺・強調オレンジ）に抑え，視線が散らばるのを防いでいます．</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 原則 3：カラーユニバーサルデザイン -->
+        <section class="demo-section">
+            <h2 class="section-title">原則 3：カラーユニバーサルデザイン（色だけに頼らない強調）</h2>
+            <div class="grid">
+                <div class="card bad-example">
+                    <div class="example-header header-bad">🔴 悪い例（色だけで区別させる）</div>
+                    <div class="demo-content cud-bad">
+                        <p>以下の赤い文字が本日の最重要項目です：</p>
+                        <p class="cud-bad-text">当日は必ず上履きを持参してください．</p>
+                    </div>
+                    <div class="explanation">
+                        <ul>
+                            <li>「赤文字にするだけ」の強調です．</li>
+                            <li>一部の色覚タイプの人（赤と緑の区別が難しい人など）や，モノクロで印刷した場合には，他の黒い文字と区別が全くつかなくなります．</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card good-example">
+                    <div class="example-header header-good">🟢 良い例（色＋形・記号の併用）</div>
+                    <div class="demo-content cud-good">
+                        <p>以下の項目が本日の最重要項目です：</p>
+                        <div class="cud-good-box">
+                            <span class="icon">⚠️</span>
+                            <span class="text">当日は必ず<strong>上履きを持参</strong>してください．</span>
+                        </div>
+                    </div>
+                    <div class="explanation">
+                        <ul>
+                            <li>赤色にするだけでなく，<strong>太字（`strong`）</strong>にし，<strong>枠線（`border`）</strong>で囲むことで視覚的なグループを作っています．</li>
+                            <li>さらに<strong>ピクトグラムや記号（⚠️）</strong>を併用することで，色が判別しにくい人でも一目で警告・重要情報であることが理解できます．</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 原則 4：レイアウトと余白 -->
+        <section class="demo-section">
+            <h2 class="section-title">原則 4：レイアウトと余白（近接・整列）</h2>
+            <div class="grid">
+                <div class="card bad-example">
+                    <div class="example-header header-bad">🔴 悪い例（余白不足と近接の崩壊）</div>
+                    <div class="demo-content layout-bad">
+                        <p class="title">持ち物リスト</p>
+                        <ul class="list">
+                            <li>上履き</li>
+                            <li>飲み物</li>
+                            <li>タオル</li>
+                        </ul>
+                        <p class="title" style="margin-top:0;">緊急連絡先</p>
+                        <p class="contact">防災本部：03-XXXX-XXXX</p>
+                    </div>
+                    <div class="explanation">
+                        <ul>
+                            <li>余白（`margin` / `padding`）が全くないため，すべての要素が画面端にくっついて息苦しいレイアウトです．</li>
+                            <li>「持ち物リスト」と「緊急連絡先」の間隔が狭すぎて，情報のブロック（近接によるグループ化）が区別できません．</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card good-example">
+                    <div class="example-header header-good">🟢 良い例（一貫した余白と整列）</div>
+                    <div class="demo-content layout-good">
+                        <p class="title">持ち物リスト</p>
+                        <ul class="list">
+                            <li>上履き</li>
+                            <li>飲み物</li>
+                            <li>タオル</li>
+                        </ul>
+                        <p class="title">緊急連絡先</p>
+                        <p class="contact">防災本部：03-XXXX-XXXX</p>
+                    </div>
+                    <div class="explanation">
+                        <ul>
+                            <li>ブロックの間に広い外側余白（`margin-bottom: 25px`）を空け，情報のまとまり（近接）をはっきりさせています．</li>
+                            <li>すべての要素の左端がきれいに揃っており（整列），視線が「上から下」へと迷わずにスムーズに流れます．</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>※ 各自のCodespacesで Live Server を起動し，この対比をブラウザで実際に確認してください．</p>
+        <p>確認できたら，演習用の <code>index.html</code> と <code>style.css</code> の修正へ進みましょう．</p>
+    </footer>
+</body>
+</html>
