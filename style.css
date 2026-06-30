@@ -1,0 +1,26 @@
+/* style.css (初期状態の仕様) */
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  /* 背景色と文字色はデフォルトのまま（白背景に黒文字） */
+}
+
+/* テーブルの基本的な線のみ指定．ここから見栄えを整える */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+/* 
+  生徒は以下に，情報デザインの原則（4色配色ルール，コントラスト比，
+  カラーユニバーサルデザイン，近接・整列のための余白など）に沿って，
+  スタイル定義を追加していきます．
+*/
