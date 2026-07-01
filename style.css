@@ -64,3 +64,42 @@ body {
     margin: 0;
     padding: 24px;
 }
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: #ffffff;
+    color: #222222;
+    font-family: "Noto Sans JP", "Segoe UI", sans-serif;
+    line-height: 1.7;
+}
+
+p {
+    margin: 0 0 1.2em;
+}
+
+ul {
+    margin: 0 0 1.5em;
+    padding-left: 1.2em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2em 0;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #c7d2db;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9fbfd;
+}
