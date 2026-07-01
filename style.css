@@ -103,3 +103,118 @@ td {
 tbody tr:nth-child(even) {
     background-color: #f9fbfd;
 }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: #ffffff;
+    color: #333333;
+    font-family: "Noto Sans JP", "Segoe UI", sans-serif;
+    line-height: 1.75;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0.4em;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #4d648d;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0.9em;
+    font-size: 2.7rem;
+    line-height: 1.08;
+    font-weight: 800;
+    color: #1f344b;
+}
+
+h3 {
+    margin-top: 2.2em;
+    margin-bottom: 0.9em;
+    padding: 0.9em 1.1em;
+    font-size: 1.05rem;
+    color: #2f487e;
+    background-color: #f2f4f8;
+    border-radius: 16px;
+}
+
+p {
+    margin: 0 0 1.35em;
+    font-size: 1rem;
+    color: #424242;
+}
+
+ul {
+    margin: 0 0 1.8em;
+    padding: 18px 22px;
+    background-color: #ffffff;
+    border: 1px solid #e1e7f0;
+    border-radius: 18px;
+    box-shadow: 0 18px 30px rgba(63, 77, 112, 0.06);
+    list-style: none;
+}
+
+li {
+    margin-bottom: 0.75em;
+    padding-left: 1.2em;
+    position: relative;
+}
+
+li::before {
+    content: "・";
+    position: absolute;
+    left: 0;
+    color: #4d648d;
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.4em 0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 18px 30px rgba(63, 77, 112, 0.08);
+}
+
+th,
+td {
+    padding: 16px;
+    border-bottom: 1px solid #e8edf4;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9fc;
+    color: #2f487e;
+    font-weight: 700;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fbfdff;
+}
+
+tbody tr:hover {
+    background-color: #eef4ff;
+}
+
+.alert-message {
+    margin: 1.4em 0;
+    padding: 18px 20px;
+    color: #b00020;
+    background-color: #fff1f2;
+    border: 1px solid #f5c1c5;
+    border-left: 6px solid #b00020;
+    border-radius: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+}
