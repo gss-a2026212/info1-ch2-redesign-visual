@@ -1,56 +1,58 @@
-/* style.css (初期スタイル定義) */
-
-/* 全体レイアウト */
 body {
-  font-family: "MS Serif", "New York", "Times New Roman", serif;
-  line-height: 1.0;
-  font-size: 14px;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #00ff00;
-  color: #ff0000;
+    font-family: "Noto Sans JP", "Segoe UI", sans-serif;
+    background-color: #f7f5f1;
+    color: #222222;
+    line-height: 1.7;
+    margin: 0;
+    padding: 24px;
 }
 
-/* 見出し */
+h1, h2, h3 {
+    margin-top: 1.4em;
+    margin-bottom: 0.6em;
+    line-height: 1.2;
+}
+
 h1 {
-  font-size: 15px;
-  font-weight: normal;
-  color: #ff0000;
-  margin: 0;
+    font-size: 2rem;
+    color: #1f3d7a;
 }
+
 h2 {
-  font-size: 14px;
-  font-weight: normal;
-  color: #ff0000;
-  margin: 0;
+    font-size: 1.4rem;
+    color: #27496d;
 }
 
-/* 警告・強調表示 */
-.alert-message {
-  color: #ff0000;
-  font-weight: normal;
+h3 {
+    font-size: 1.1rem;
+    color: #243b55;
+    border-bottom: 2px solid #aec8d8;
+    padding-bottom: 6px;
 }
 
-/* テーブルスタイル */
 table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 0;
-}
-th, td {
-  border: 1px solid #ff0000;
-  padding: 0;
-  text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
 }
 
-/* リストスタイル */
-ul, li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+th,
+td {
+    padding: 12px;
+    border: 1px solid #c7d2db;
+    text-align: left;
 }
-p {
-  margin: 0;
-  padding: 0;
+
+th {
+    background-color: #e8eef5;
+    font-weight: bold;
+}
+
+.alert-message {
+    color: #b00020;
+    background-color: #fee6ea;
+    border: 2px solid #b00020;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
 }
